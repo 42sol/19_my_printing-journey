@@ -1,20 +1,3 @@
 [
-  "obsidian-admonition",
-  "obsidian-outliner",
-  "buttons",
-  "obsidian-code-block-enhancer",
-  "open-vscode",
-  "obsidian-better-codeblock",
-  "python-lab-plugin",
-  "obsidian-text-expander",
-  "obsidian-asciidoc-blocks",
-  "obsidian-nomnoml-diagram",
-  "nldates-obsidian",
-  "oz-image-plugin",
-  "note-refactor-obsidian",
-  "obsidian-icon-folder",
-  "obsidian-pandoc",
-  "obsidian-advanced-uri",
-  "open-related-url",
-  "obsidian-screwdriver"
+  "table-editor-obsidian"
 ]
