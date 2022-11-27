@@ -1,6 +1,6 @@
 # 19 my printer voyage
 
-## Intent
+## Intend
 
 This is a journaling style knowledge base about things I am learning on my voyage with 3D-printing - or making in its broader sense.
 
