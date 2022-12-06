@@ -1,0 +1,161 @@
+{
+  "main": {
+    "id": "b4229b8dde720cae",
+    "type": "split",
+    "children": [
+      {
+        "id": "be4a5a02648390cc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ec7848a1daec46d3",
+            "type": "leaf",
+            "state": {
+              "type": "kanban",
+              "state": {
+                "file": "projects/2022-12.md"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "0e3f48b66743aedb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3712f5866a56fba9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "projects/openscad constructive.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "12a40154eb962df7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5d516261154dd8a7",
+            "type": "leaf",
+            "state": {
+              "type": "kanban",
+              "state": {
+                "file": "projects/2022-12.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c11361494b21dcf1",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "d6e3b24d942fe571",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "233a2d643737ed94",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "7630c894d98fec24",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true
+          }
+        }
+      },
+      {
+        "id": "e528d6e4ae7602e3",
+        "type": "leaf",
+        "state": {
+          "type": "starred",
+          "state": {}
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "1a258e7457d52162",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "156b3f262551f488",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "projects/openscad constructive.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "3b1a26d13817ac96",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "file": "projects/openscad constructive.md",
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "026a5ddba96b48c8",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "projects/openscad constructive.md"
+          }
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "active": "3712f5866a56fba9",
+  "lastOpenFiles": [
+    "projects/2022-12.md",
+    "projects/2022-12-02.md"
+  ]
+}
