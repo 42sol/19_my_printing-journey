@@ -31,3 +31,6 @@ Its variables and text functions let others easily personalize and generate thei
 
 - [OpenSCAD HomnePage](https://openscad.org/)
 - [OpenSCAD Libraries](https://openscad.org/libraries.html)
+
+### beanz/celtic-knot-scad: Celtic Knot Library for Openscad
+https://github.com/beanz/celtic-knot-scad

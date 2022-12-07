@@ -23,16 +23,34 @@
             "id": "8ccc44c5232138fb",
             "type": "leaf",
             "state": {
+<<<<<<< Updated upstream
               "type": "empty",
               "state": {}
+=======
+              "type": "markdown",
+              "state": {
+                "file": "projects/Project Tombow Stand - new Design  .. openscad integrated in desk-stand.md",
+                "mode": "source",
+                "source": false
+              }
+>>>>>>> Stashed changes
             }
           },
           {
             "id": "1e62dd5bc681e738",
             "type": "leaf",
             "state": {
+<<<<<<< Updated upstream
               "type": "empty",
               "state": {}
+=======
+              "type": "markdown",
+              "state": {
+                "file": "projects/DIN-Formate.md",
+                "mode": "source",
+                "source": false
+              }
+>>>>>>> Stashed changes
             }
           }
         ],
@@ -102,6 +120,10 @@
             "state": {
               "type": "backlink",
               "state": {
+<<<<<<< Updated upstream
+=======
+                "file": "projects/DIN-Formate.md",
+>>>>>>> Stashed changes
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,6 +140,10 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+<<<<<<< Updated upstream
+=======
+                "file": "projects/DIN-Formate.md",
+>>>>>>> Stashed changes
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +165,13 @@
             "type": "leaf",
             "state": {
               "type": "outline",
+<<<<<<< Updated upstream
               "state": {}
+=======
+              "state": {
+                "file": "projects/DIN-Formate.md"
+              }
+>>>>>>> Stashed changes
             }
           }
         ]
@@ -151,7 +183,10 @@
   },
   "active": "1e62dd5bc681e738",
   "lastOpenFiles": [
+<<<<<<< Updated upstream
     "projects/DIN-Formate.md",
+=======
+>>>>>>> Stashed changes
     "projects/Project Tombow Stand - new Design  .. openscad integrated in desk-stand.md",
     "projects/2022-12-03.md",
     "YM_Media/model.thingiverse.tombow.reference.png",
@@ -160,6 +195,11 @@
     "projects/2022-11-25.md",
     "projects/Unbenannt.md",
     "projects/2022-12.md",
+<<<<<<< Updated upstream
     "projects/2022-12-02.md"
+=======
+    "projects/2022-12-02.md",
+    "Boxes.md"
+>>>>>>> Stashed changes
   ]
 }
