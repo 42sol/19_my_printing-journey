@@ -4,67 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "f3d72f669bd8aa8b",
+        "id": "654d187476a01582",
         "type": "tabs",
         "children": [
           {
-            "id": "b2424d63088d8bfe",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "readme.md",
-                "mode": "source",
-                "source": true
-              }
-            }
-          },
-          {
-            "id": "e36f46f7498c1acb",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "dbbe9bdb0d8de923",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "apps/openscad/readme.md",
-                "mode": "source",
-                "source": true
-              }
-            }
-          },
-          {
-            "id": "9641cf724e4a4d1c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "projects/Unbenannt.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "5c2140a1e7c2856c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "projects/2022-11-25.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ef53967822bc1da2",
+            "id": "dcbe157b75ac0e95",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -74,9 +18,25 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "8ccc44c5232138fb",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "1e62dd5bc681e738",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -105,7 +65,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#yesterday",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -122,12 +82,11 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "b00b661a33961126",
@@ -143,7 +102,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "projects/2022-12-03.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -160,7 +118,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "projects/2022-12-03.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -182,9 +139,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "projects/2022-12-03.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -194,17 +149,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "39582613d99d2dfb",
+  "active": "1e62dd5bc681e738",
   "lastOpenFiles": [
-    "projects/2022-12-02.md",
+    "projects/DIN-Formate.md",
+    "projects/Project Tombow Stand - new Design  .. openscad integrated in desk-stand.md",
     "projects/2022-12-03.md",
-    "projects/2022-11-25.md",
-    "projects/2022-12.md",
-    "projects/Unbenannt.md",
-    "apps/openscad/libraries_selection/Mark's Enclosure Helper.md",
+    "YM_Media/model.thingiverse.tombow.reference.png",
+    "YM_Media/app.sol75.example.beta.2022-12.png",
     "apps/openscad/readme.md",
-    "apps/openscad/libraries_selection/Functional.md",
-    "apps/openscad/libraries_selection/funcutils.md",
-    "apps/openscad/libraries_selection/NopSCADlib.md"
+    "projects/2022-11-25.md",
+    "projects/Unbenannt.md",
+    "projects/2022-12.md",
+    "projects/2022-12-02.md"
   ]
 }
