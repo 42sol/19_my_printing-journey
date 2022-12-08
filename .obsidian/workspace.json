@@ -8,26 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "dcbe157b75ac0e95",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "projects/2022-12-03.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8ccc44c5232138fb",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
             "id": "1e62dd5bc681e738",
             "type": "leaf",
             "state": {
@@ -38,9 +18,32 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "7dae03996f4637bd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2022-12-08.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "130cc9bc83aab8c4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2022-12-08.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -69,7 +72,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "roundevery",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -86,7 +89,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -157,17 +161,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "1e62dd5bc681e738",
+  "active": "39582613d99d2dfb",
   "lastOpenFiles": [
+    "2022-12-08.md",
+    "Brief Medikamente.md",
+    "Boxes.md",
+    "2022-12-07.md",
     "projects/DIN-Formate.md",
     "projects/Project Tombow Stand - new Design  .. openscad integrated in desk-stand.md",
     "projects/2022-12-03.md",
     "YM_Media/model.thingiverse.tombow.reference.png",
     "YM_Media/app.sol75.example.beta.2022-12.png",
-    "apps/openscad/readme.md",
-    "projects/2022-11-25.md",
-    "projects/Unbenannt.md",
-    "projects/2022-12.md",
-    "projects/2022-12-02.md"
+    "apps/openscad/readme.md"
   ]
 }
