@@ -13,7 +13,42 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2022-12-07.md",
+                "file": "2022-12-09.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8bc400353c19ea97",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "projects/2022-12-10.md",
+                "mode": "source",
+                "source": false
+            }
+          },
+          {
+            "id": "86663fed2ca7c918",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "projects/Lego Specification.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "05a01100f35c8a66",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "projects/Lego Gear Dimensons.md",
                 "mode": "source",
                 "source": false
               }
@@ -43,7 +78,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -72,8 +108,8 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "roundevery",
-                "matchingCase": false,
+                "query": "lego",
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -89,8 +125,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -110,7 +145,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2022-12-07.md",
+                "file": "projects/Lego Gear Dimensons.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +162,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2022-12-07.md",
+                "file": "projects/Lego Gear Dimensons.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,28 +185,36 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2022-12-07.md"
+                "file": "projects/Lego Gear Dimensons.md"
               }
             }
+          },
+          {
+            "id": "7e17596b85f73327",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
-  "active": "39582613d99d2dfb",
+  "active": "05a01100f35c8a66",
   "lastOpenFiles": [
-    "2022-12-08.md",
-    "Brief Medikamente.md",
-    "Boxes.md",
-    "2022-12-07.md",
-    "projects/DIN-Formate.md",
-    "projects/Project Tombow Stand - new Design  .. openscad integrated in desk-stand.md",
+    "projects/Lego Specification.md",
+    "projects/2022-12-10.md",
     "projects/2022-12-03.md",
-    "YM_Media/model.thingiverse.tombow.reference.png",
-    "YM_Media/app.sol75.example.beta.2022-12.png",
-    "apps/openscad/readme.md"
+    "2022-11-27.md",
+    "projects/2022-11-25.md",
+    "apps/fornjot/readme.md",
+    "2022-12-09.md",
+    "2022-12-07.md",
+    "2022-12-08.md",
+    "Brief Medikamente.md"
   ]
 }
