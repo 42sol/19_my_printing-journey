@@ -29,7 +29,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "projects/openscad constructive.md",
+                "file": "projects/2022-11-25.md",
                 "mode": "source",
                 "source": false
               }
@@ -117,7 +117,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "projects/openscad constructive.md",
+            "file": "projects/2022-11-25.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -134,7 +134,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "projects/openscad constructive.md",
+            "file": "projects/2022-11-25.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -146,7 +146,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "projects/openscad constructive.md"
+            "file": "projects/2022-11-25.md"
           }
         }
       }
@@ -155,6 +155,7 @@
   },
   "active": "3712f5866a56fba9",
   "lastOpenFiles": [
+    "projects/openscad constructive.md",
     "projects/2022-12.md",
     "projects/2022-12-02.md"
   ]
