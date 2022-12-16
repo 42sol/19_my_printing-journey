@@ -7,4 +7,4 @@ A0 = 2x A1 = 4x A2 = 8x A3 = 16x A4 = 32 x A5 = 64 x A6 = 128 x A7 = 256 x A8
 
 A4 = 2x A5 = 4x A6 = 8x A7 = 16x A8 
 
-![[Pasted image 20221204140536.png]]
+![[din_formats.png]]

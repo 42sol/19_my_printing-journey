@@ -10,7 +10,11 @@ So if this thoughts are helpful to others that is really great!
 Feel free to start it or to even write me a note.
 
 ## My Position (reflection)
+mainly in [[journals]]
 
 ## Next Steps (direction)
+Setup my [[references]] (including cheat sheets) and evaluate the [[apps]] available and their helpfulness to me.
 
 ## Ideas (collection)
+Collection of ideas and [[projects]].
+
