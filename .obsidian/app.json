@@ -1,6 +1,6 @@
 {
   "trashOption": "local",
-  "newFileLocation": "current",
+  "newFileLocation": "folder",
   "readableLineLength": false,
   "showLineNumber": true,
   "attachmentFolderPath": "./",
@@ -11,6 +11,6 @@
     "margin": "0",
     "downscalePercent": 77
   },
-  "showUnsupportedFiles": true,
-  "spellcheck": true
+  "newFileFolderPath": "journals",
+  "showUnsupportedFiles": true
 }
