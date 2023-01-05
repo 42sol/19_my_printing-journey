@@ -11,9 +11,115 @@
             "id": "ec7848a1daec46d3",
             "type": "leaf",
             "state": {
-              "type": "kanban",
+              "type": "graph",
+              "state": {}
+            }
+          }
+        ]
+      },
+      {
+        "id": "80f30ad70bc2dca0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7c024bb5fb529929",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
               "state": {
-                "file": "projects/2022-12.md"
+                "file": "apps/openscad/test_music.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "f304da46218f157a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "37930e2e4f9e34bc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "apps/openscad/test_music.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "a4f2f47fb6c0f1fb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bff433fdca39b220",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "apps/openscad/test_music.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "aff7dd328fbb1417",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2e23bfabd432374a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "apps/openscad/test_music.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "be03a5b45d27cf76",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5e0d89757eeb4fa6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "apps/openscad/test_music.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "8ec917684d5de8d2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2e429a7308085d4b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "apps/openscad/test_music.md",
+                "mode": "preview",
+                "source": false
               }
             }
           }
@@ -29,7 +135,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "projects/2022-11-25.md",
+                "file": "references/DIN-Formate.md",
                 "mode": "source",
                 "source": false
               }
@@ -105,7 +211,7 @@
         }
       }
     ],
-    "currentTab": 0
+    "currentTab": 1
   },
   "right": {
     "id": "1a258e7457d52162",
@@ -117,7 +223,6 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "projects/2022-11-25.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -134,7 +239,6 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "projects/2022-11-25.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -145,18 +249,23 @@
         "type": "leaf",
         "state": {
           "type": "outline",
-          "state": {
-            "file": "projects/2022-11-25.md"
-          }
+          "state": {}
         }
       }
     ],
     "currentTab": 0
   },
-  "active": "3712f5866a56fba9",
+  "active": "ec7848a1daec46d3",
   "lastOpenFiles": [
-    "projects/openscad constructive.md",
+    "apps/openscad/test_music.md",
+    "apps/openscad/readme.md",
     "projects/2022-12.md",
-    "projects/2022-12-02.md"
+    "references/DIN-Formate.md",
+    "projects/Lego Gear Dimensons.md",
+    "journals/2022-12-03.md",
+    "journals/2022-12-02.md",
+    "journals/2022-11-25.md",
+    "apps/fornjot/readme.md",
+    "projects/openscad constructive.md"
   ]
 }

@@ -10,5 +10,7 @@
     "landscape": false,
     "margin": "0",
     "downscalePercent": 77
-  }
+  },
+  "showUnsupportedFiles": true,
+  "spellcheck": true
 }
