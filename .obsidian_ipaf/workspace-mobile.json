@@ -1,18 +1,20 @@
 {
   "main": {
-    "id": "1a4bfce2f30c0556",
+    "id": "cc0210b2e80912e1",
     "type": "split",
     "children": [
       {
-        "id": "076e743d16040268",
+        "id": "eba3a81be1018ebd",
         "type": "tabs",
         "children": [
           {
-            "id": "baec2933ec8d6d34",
+            "id": "62f5efa99d7a7fa5",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "excalidraw",
+              "state": {
+                "file": "apps/openscad/libraries_selection/lego_dimensions.excalidraw.md"
+              }
             }
           }
         ]
@@ -21,11 +23,11 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "f0a7ec9a14a1b9fd",
+    "id": "551bfa2c64d3680e",
     "type": "mobile-drawer",
     "children": [
       {
-        "id": "f9d7a40fa6ef6b16",
+        "id": "ba43599c0c09c628",
         "type": "leaf",
         "state": {
           "type": "file-explorer",
@@ -35,7 +37,7 @@
         }
       },
       {
-        "id": "78167709e2c0b68c",
+        "id": "e2baa06f9fa817d4",
         "type": "leaf",
         "state": {
           "type": "search",
@@ -50,7 +52,7 @@
         }
       },
       {
-        "id": "5209106a554b6f35",
+        "id": "2486bf66243438c7",
         "type": "leaf",
         "state": {
           "type": "tag",
@@ -61,7 +63,7 @@
         }
       },
       {
-        "id": "70c51f07e164866b",
+        "id": "1f056439b4b16545",
         "type": "leaf",
         "state": {
           "type": "starred",
@@ -72,15 +74,16 @@
     "currentTab": 0
   },
   "right": {
-    "id": "3fda2c4e5a0fc1ee",
+    "id": "be5c52dc884c487d",
     "type": "mobile-drawer",
     "children": [
       {
-        "id": "92aab438ce38ed0c",
+        "id": "7733c8bc97d6556d",
         "type": "leaf",
         "state": {
           "type": "backlink",
           "state": {
+            "file": "apps/openscad/libraries_selection/lego_dimensions.excalidraw.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -92,27 +95,38 @@
         }
       },
       {
-        "id": "5a6fb2b2b128c489",
+        "id": "de5a0a7c0bb03721",
         "type": "leaf",
         "state": {
           "type": "outgoing-link",
           "state": {
+            "file": "apps/openscad/libraries_selection/lego_dimensions.excalidraw.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
         }
       },
       {
-        "id": "66711a131a2e31fc",
+        "id": "beef8c1e010502ea",
         "type": "leaf",
         "state": {
           "type": "outline",
-          "state": {}
+          "state": {
+            "file": "apps/openscad/libraries_selection/lego_dimensions.excalidraw.md"
+          }
         }
       }
     ],
     "currentTab": 0
   },
-  "active": "baec2933ec8d6d34",
-  "lastOpenFiles": []
+  "active": "62f5efa99d7a7fa5",
+  "lastOpenFiles": [
+    "apps/openscad/libraries_selection/readme.md",
+    "apps/openscad/libraries_selection/lego_dimensions.excalidraw.md",
+    "apps/openscad/libraries_selection/bricked/Lego_dimensions.svg",
+    "Excalidraw/Drawing 2023-01-05 21.26.31.excalidraw.md",
+    "apps/openscad/Drawing 2023-01-05 21.29.46.excalidraw.md",
+    "apps/solidpython/readme.md",
+    "projects/2022-12.md"
+  ]
 }
