@@ -20245,6 +20245,13 @@ var IsomorphicGit = class extends GitManager {
       return diff2;
     }
   }
+  async getLastCommitTime() {
+    const repo = this.getRepo();
+    const oid = await this.resolveRef("HEAD");
+    const commit2 = await isomorphic_git_default.readCommit({ ...repo, oid });
+    const date = commit2.commit.committer.timestamp;
+    return new Date(date * 1e3);
+  }
   getFileStatusResult(row) {
     const status2 = this.status_mapping[`${row[this.HEAD]}${row[this.WORKDIR]}${row[this.STAGE]}`];
     return {
@@ -23834,7 +23841,7 @@ function abortPlugin(signal) {
   return [onSpawnBefore, onSpawnAfter];
 }
 function isConfigSwitch(arg) {
-  return arg.trim().toLowerCase() === "-c";
+  return typeof arg === "string" && arg.trim().toLowerCase() === "-c";
 }
 function preventProtocolOverride(arg, next) {
   if (!isConfigSwitch(arg)) {
@@ -24441,6 +24448,12 @@ var SimpleGit = class extends GitManager {
   async diff(file, commit1, commit2) {
     return await this.git.diff([`${commit1}..${commit2}`, "--", file]);
   }
+  async getLastCommitTime() {
+    const res = await this.git.log({ n: 1 }, (err) => this.onError(err));
+    if (res != null && res.latest != null) {
+      return new Date(res.latest.date);
+    }
+  }
   isGitInstalled() {
     const command = (0, import_child_process2.spawnSync)(this.plugin.localStorage.getGitPath() || "git", ["--version"], {
       stdio: "ignore"
@@ -24511,14 +24524,24 @@ var ObsidianGitSettingsTab = class extends import_obsidian7.PluginSettingTab {
           new import_obsidian7.Notice("Please specify a valid number.");
         }
       }));
-      new import_obsidian7.Setting(containerEl).setName(`Auto Backup after Filechange`).setDesc(`If turned on, do auto ${commitOrBackup} every ${plugin.settings.autoSaveInterval} minutes after last change. This also prevents auto ${commitOrBackup} while editing a file. If turned off, it's independent from last the change.`).addToggle((toggle) => toggle.setValue(plugin.settings.autoBackupAfterFileChange).onChange((value) => {
-        plugin.settings.autoBackupAfterFileChange = value;
-        plugin.saveSettings();
-        plugin.clearAutoBackup();
-        if (plugin.settings.autoSaveInterval > 0) {
-          plugin.startAutoBackup(plugin.settings.autoSaveInterval);
-        }
-      }));
+      if (!plugin.settings.setLastSaveToLastCommit)
+        new import_obsidian7.Setting(containerEl).setName(`Auto Backup after file change`).setDesc(`If turned on, do auto ${commitOrBackup} every ${plugin.settings.autoSaveInterval} minutes after last change. This also prevents auto ${commitOrBackup} while editing a file. If turned off, it's independent from last the change.`).addToggle((toggle) => toggle.setValue(plugin.settings.autoBackupAfterFileChange).onChange((value) => {
+          plugin.settings.autoBackupAfterFileChange = value;
+          this.display();
+          plugin.saveSettings();
+          plugin.clearAutoBackup();
+          if (plugin.settings.autoSaveInterval > 0) {
+            plugin.startAutoBackup(plugin.settings.autoSaveInterval);
+          }
+        }));
+      if (!plugin.settings.autoBackupAfterFileChange)
+        new import_obsidian7.Setting(containerEl).setName(`Auto ${commitOrBackup} after lastest commit`).setDesc(`If turned on, set last auto ${commitOrBackup} time to lastest commit`).addToggle((toggle) => toggle.setValue(plugin.settings.setLastSaveToLastCommit).onChange(async (value) => {
+          plugin.settings.setLastSaveToLastCommit = value;
+          plugin.saveSettings();
+          this.display();
+          plugin.clearAutoBackup();
+          await plugin.setUpAutoBackup();
+        }));
       if (plugin.settings.differentIntervalCommitAndPush) {
         new import_obsidian7.Setting(containerEl).setName(`Vault push interval (minutes)`).setDesc("Push changes every X minutes. Set to 0 (default) to disable.").addText((text2) => text2.setValue(String(plugin.settings.autoPushInterval)).onChange((value) => {
           if (!isNaN(Number(value))) {
@@ -24551,10 +24574,6 @@ var ObsidianGitSettingsTab = class extends import_obsidian7.PluginSettingTab {
           new import_obsidian7.Notice("Please specify a valid number.");
         }
       }));
-      new import_obsidian7.Setting(containerEl).setName("Commit message on manual backup/commit").setDesc("Available placeholders: {{date}} (see below), {{hostname}} (see below) and {{numFiles}} (number of changed files in the commit)").addText((text2) => text2.setPlaceholder("vault backup: {{date}}").setValue(plugin.settings.commitMessage ? plugin.settings.commitMessage : "").onChange((value) => {
-        plugin.settings.commitMessage = value;
-        plugin.saveSettings();
-      }));
       new import_obsidian7.Setting(containerEl).setName("Specify custom commit message on auto backup").setDesc("You will get a pop up to specify your message").addToggle((toggle) => toggle.setValue(plugin.settings.customMessageOnAutoBackup).onChange((value) => {
         plugin.settings.customMessageOnAutoBackup = value;
         plugin.saveSettings();
@@ -24565,6 +24584,10 @@ var ObsidianGitSettingsTab = class extends import_obsidian7.PluginSettingTab {
       }));
       containerEl.createEl("br");
       containerEl.createEl("h3", { text: "Commit message" });
+      new import_obsidian7.Setting(containerEl).setName("Commit message on manual backup/commit").setDesc("Available placeholders: {{date}} (see below), {{hostname}} (see below) and {{numFiles}} (number of changed files in the commit)").addText((text2) => text2.setPlaceholder("vault backup: {{date}}").setValue(plugin.settings.commitMessage ? plugin.settings.commitMessage : "").onChange((value) => {
+        plugin.settings.commitMessage = value;
+        plugin.saveSettings();
+      }));
       new import_obsidian7.Setting(containerEl).setName("{{date}} placeholder format").setDesc('Specify custom date format. E.g. "YYYY-MM-DD HH:mm:ss"').addText((text2) => text2.setPlaceholder(plugin.settings.commitDateFormat).setValue(plugin.settings.commitDateFormat).onChange(async (value) => {
         plugin.settings.commitDateFormat = value;
         await plugin.saveSettings();
@@ -24951,7 +24974,8 @@ var DEFAULT_SETTINGS = {
   changedFilesInStatusBar: false,
   showedMobileNotice: false,
   refreshSourceControlTimer: 7e3,
-  showBranchStatusBar: true
+  showBranchStatusBar: true,
+  setLastSaveToLastCommit: false
 };
 var GIT_VIEW_CONFIG = {
   type: "git-view",
@@ -26657,6 +26681,13 @@ var DiffView = class extends import_obsidian13.ItemView {
     return DIFF_VIEW_CONFIG.type;
   }
   getDisplayText() {
+    var _a2;
+    if (((_a2 = this.state) == null ? void 0 : _a2.file) != null) {
+      let fileName = this.state.file.split("/").last();
+      if (fileName == null ? void 0 : fileName.endsWith(".md"))
+        fileName = fileName.slice(0, -3);
+      return DIFF_VIEW_CONFIG.name + ` (${fileName})`;
+    }
     return DIFF_VIEW_CONFIG.name;
   }
   getIcon() {
@@ -27118,7 +27149,8 @@ function transition_out(block, local, detach2, callback) {
 }
 var null_transition = { duration: 0 };
 function create_bidirectional_transition(node, fn, params, intro) {
-  let config = fn(node, params);
+  const options = { direction: "both" };
+  let config = fn(node, params, options);
   let t = intro ? 0 : 1;
   let running_program = null;
   let pending_program = null;
@@ -27198,7 +27230,7 @@ function create_bidirectional_transition(node, fn, params, intro) {
     run(b) {
       if (is_function(config)) {
         wait().then(() => {
-          config = config();
+          config = config(options);
           go(b);
         });
       } else {
@@ -30333,6 +30365,7 @@ function instance5($$self, $$props, $$invalidate) {
         if (commitMessage !== plugin.settings.commitMessage) {
           $$invalidate(2, commitMessage = "");
         }
+        plugin.setUpAutoBackup();
       }).finally(triggerRefresh);
     }
   }
@@ -30728,7 +30761,7 @@ var ObsidianGit = class extends import_obsidian23.Plugin {
             active: true,
             state: {
               staged: false,
-              file: file.path
+              file: this.gitManager.getPath(file.path, true)
             }
           });
         }
@@ -31099,22 +31132,7 @@ var ObsidianGit = class extends import_obsidian23.Plugin {
           if (this.settings.autoPullOnBoot) {
             this.promiseQueue.addTask(() => this.pullChangesFromRemote());
           }
-          const lastAutos = await this.loadLastAuto();
-          if (this.settings.autoSaveInterval > 0) {
-            const now2 = new Date();
-            const diff2 = this.settings.autoSaveInterval - Math.round((now2.getTime() - lastAutos.backup.getTime()) / 1e3 / 60);
-            this.startAutoBackup(diff2 <= 0 ? 0 : diff2);
-          }
-          if (this.settings.differentIntervalCommitAndPush && this.settings.autoPushInterval > 0) {
-            const now2 = new Date();
-            const diff2 = this.settings.autoPushInterval - Math.round((now2.getTime() - lastAutos.push.getTime()) / 1e3 / 60);
-            this.startAutoPush(diff2 <= 0 ? 0 : diff2);
-          }
-          if (this.settings.autoPullInterval > 0) {
-            const now2 = new Date();
-            const diff2 = this.settings.autoPullInterval - Math.round((now2.getTime() - lastAutos.pull.getTime()) / 1e3 / 60);
-            this.startAutoPull(diff2 <= 0 ? 0 : diff2);
-          }
+          this.setUpAutos();
           break;
         default:
           console.log("Something weird happened. The 'checkRequirements' result is " + result);
@@ -31186,13 +31204,14 @@ var ObsidianGit = class extends import_obsidian23.Plugin {
     if (!await this.isAllInitialized())
       return;
     const filesUpdated = await this.pull();
+    this.setUpAutoBackup();
     if (!filesUpdated) {
       this.displayMessage("Everything is up-to-date");
     }
     if (this.gitManager instanceof SimpleGit) {
       const status2 = await this.gitManager.status();
       if (status2.conflicted.length > 0) {
-        this.displayError(`You have ${status2.conflicted.length} conflict ${status2.conflicted.length > 1 ? "files" : "file"}`);
+        this.displayError(`You have conflicts in ${status2.conflicted.length} ${status2.conflicted.length == 1 ? "file" : "files"}`);
         this.handleConflict(status2.conflicted);
       }
     }
@@ -31233,24 +31252,20 @@ var ObsidianGit = class extends import_obsidian23.Plugin {
     let status2;
     let unstagedFiles;
     if (this.gitManager instanceof SimpleGit) {
-      const file = this.app.vault.getAbstractFileByPath(this.conflictOutputFile);
-      if (file != null)
-        await this.app.vault.delete(file);
+      this.mayDeleteConflictFile();
       status2 = await this.updateCachedStatus();
       if (fromAutoBackup && status2.conflicted.length > 0) {
-        this.displayError(`Did not commit, because you have ${status2.conflicted.length} conflict ${status2.conflicted.length > 1 ? "files" : "file"}. Please resolve them and commit per command.`);
+        this.displayError(`Did not commit, because you have conflicts in ${status2.conflicted.length} ${status2.conflicted.length == 1 ? "file" : "files"}. Please resolve them and commit per command.`);
         this.handleConflict(status2.conflicted);
         return false;
       }
       changedFiles = [...status2.changed, ...status2.staged];
     } else if (fromAutoBackup && hadConflict) {
       this.setState(PluginState.conflicted);
-      this.displayError(`Did not commit, because you have conflict files. Please resolve them and commit per command.`);
+      this.displayError(`Did not commit, because you have conflicts. Please resolve them and commit per command.`);
       return false;
     } else if (hadConflict) {
-      const file = this.app.vault.getAbstractFileByPath(this.conflictOutputFile);
-      if (file != null)
-        await this.app.vault.delete(file);
+      await this.mayDeleteConflictFile();
       status2 = await this.updateCachedStatus();
       changedFiles = [...status2.changed, ...status2.staged];
     } else {
@@ -31290,7 +31305,8 @@ var ObsidianGit = class extends import_obsidian23.Plugin {
         roughly = true;
         committedFiles = changedFiles.length;
       }
-      this.displayMessage(`Committed${roughly ? " approx." : ""} ${committedFiles} ${committedFiles > 1 ? "files" : "file"}`);
+      this.setUpAutoBackup();
+      this.displayMessage(`Committed${roughly ? " approx." : ""} ${committedFiles} ${committedFiles == 1 ? "file" : "files"}`);
     } else {
       this.displayMessage("No changes to commit");
     }
@@ -31326,17 +31342,16 @@ var ObsidianGit = class extends import_obsidian23.Plugin {
     if (!await this.remotesAreSet()) {
       return false;
     }
-    const file = this.app.vault.getAbstractFileByPath(this.conflictOutputFile);
     const hadConflict = this.localStorage.getConflict() === "true";
-    if (this.gitManager instanceof SimpleGit && file)
-      await this.app.vault.delete(file);
+    if (this.gitManager instanceof SimpleGit)
+      await this.mayDeleteConflictFile();
     let status2;
     if (this.gitManager instanceof SimpleGit && (status2 = await this.updateCachedStatus()).conflicted.length > 0) {
-      this.displayError(`Cannot push. You have ${status2.conflicted.length} conflict ${status2.conflicted.length > 1 ? "files" : "file"}`);
+      this.displayError(`Cannot push. You have conflicts in ${status2.conflicted.length} ${status2.conflicted.length == 1 ? "file" : "files"}`);
       this.handleConflict(status2.conflicted);
       return false;
     } else if (this.gitManager instanceof IsomorphicGit && hadConflict) {
-      this.displayError(`Cannot push. You have conflict files`);
+      this.displayError(`Cannot push. You have conflicts`);
       this.setState(PluginState.conflicted);
       return false;
     }
@@ -31346,7 +31361,7 @@ var ObsidianGit = class extends import_obsidian23.Plugin {
       console.log("Pushed!", pushedFiles);
       this.lastUpdate = Date.now();
       if (pushedFiles > 0) {
-        this.displayMessage(`Pushed ${pushedFiles} ${pushedFiles > 1 ? "files" : "file"} to remote`);
+        this.displayMessage(`Pushed ${pushedFiles} ${pushedFiles == 1 ? "file" : "files"} to remote`);
       } else {
         this.displayMessage(`No changes to push`);
       }
@@ -31362,10 +31377,21 @@ var ObsidianGit = class extends import_obsidian23.Plugin {
     const pulledFiles = await this.gitManager.pull() || [];
     this.offlineMode = false;
     if (pulledFiles.length > 0) {
-      this.displayMessage(`Pulled ${pulledFiles.length} ${pulledFiles.length > 1 ? "files" : "file"} from remote`);
+      this.displayMessage(`Pulled ${pulledFiles.length} ${pulledFiles.length == 1 ? "file" : "files"} from remote`);
       this.lastPulledFiles = pulledFiles;
     }
     return pulledFiles.length != 0;
+  }
+  async mayDeleteConflictFile() {
+    const file = this.app.vault.getAbstractFileByPath(this.conflictOutputFile);
+    if (file) {
+      this.app.workspace.iterateAllLeaves((leaf) => {
+        if (leaf.view instanceof import_obsidian23.MarkdownView && leaf.view.file.path == file.path) {
+          leaf.detach();
+        }
+      });
+      await this.app.vault.delete(file);
+    }
   }
   async stageFile(file) {
     if (!await this.isAllInitialized())
@@ -31448,6 +31474,42 @@ var ObsidianGit = class extends import_obsidian23.Plugin {
     }
     return true;
   }
+  async setUpAutoBackup() {
+    if (this.settings.setLastSaveToLastCommit) {
+      this.clearAutoBackup();
+      const lastCommitDate = await this.gitManager.getLastCommitTime();
+      if (lastCommitDate) {
+        this.localStorage.setLastAutoBackup(lastCommitDate.toString());
+      }
+    }
+    if (!this.timeoutIDBackup && !this.onFileModifyEventRef) {
+      const lastAutos = await this.loadLastAuto();
+      if (this.settings.autoSaveInterval > 0) {
+        const now2 = new Date();
+        const diff2 = this.settings.autoSaveInterval - Math.round((now2.getTime() - lastAutos.backup.getTime()) / 1e3 / 60);
+        this.startAutoBackup(diff2 <= 0 ? 0 : diff2);
+      }
+    }
+  }
+  async setUpAutos() {
+    this.setUpAutoBackup();
+    const lastAutos = await this.loadLastAuto();
+    if (this.settings.differentIntervalCommitAndPush && this.settings.autoPushInterval > 0) {
+      const now2 = new Date();
+      const diff2 = this.settings.autoPushInterval - Math.round((now2.getTime() - lastAutos.push.getTime()) / 1e3 / 60);
+      this.startAutoPush(diff2 <= 0 ? 0 : diff2);
+    }
+    if (this.settings.autoPullInterval > 0) {
+      const now2 = new Date();
+      const diff2 = this.settings.autoPullInterval - Math.round((now2.getTime() - lastAutos.pull.getTime()) / 1e3 / 60);
+      this.startAutoPull(diff2 <= 0 ? 0 : diff2);
+    }
+  }
+  clearAutos() {
+    this.clearAutoBackup();
+    this.clearAutoPush();
+    this.clearAutoPull();
+  }
   startAutoBackup(minutes) {
     const time = (minutes != null ? minutes : this.settings.autoSaveInterval) * 6e4;
     if (this.settings.autoBackupAfterFileChange) {
@@ -31527,8 +31589,11 @@ var ObsidianGit = class extends import_obsidian23.Plugin {
     let lines;
     if (conflicted !== void 0) {
       lines = [
-        "# Conflict files",
-        "Please resolve them and commit per command (This file will be deleted before the commit).",
+        "# Conflicts",
+        "Please resolve them and commit them using the commands `Obsidian Git: Commit all changes` followed by `Obsidian Git: Push`",
+        "(This file will automatically be deleted before commit)",
+        "[[#Additional Instructions]] available below file list",
+        "",
         ...conflicted.map((e) => {
           const file = this.app.vault.getAbstractFileByPath(e);
           if (file instanceof import_obsidian23.TFile) {
@@ -31537,7 +31602,18 @@ var ObsidianGit = class extends import_obsidian23.Plugin {
           } else {
             return `- Not a file: ${e}`;
           }
-        })
+        }),
+        `
+# Additional Instructions
+I strongly recommend to use "Source mode" for viewing the conflicted files. For simple conflicts, in each file listed above replace every occurrence of the following text blocks with the desired text.
+
+\`\`\`diff
+<<<<<<< HEAD
+    File changes in local repository
+=======
+    File changes in remote repository
+>>>>>>> origin/main
+\`\`\``
       ];
     }
     this.writeAndOpenFile(lines == null ? void 0 : lines.join("\n"));
