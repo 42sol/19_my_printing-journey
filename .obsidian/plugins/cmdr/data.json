@@ -11,7 +11,22 @@
       "mode": "any"
     }
   ],
-  "leftRibbon": [],
+  "leftRibbon": [
+    {
+      "id": "workspace:goto-tab-1",
+      "icon": "alert-circle",
+      "name": "Go to tab #1",
+      "mode": "desktop",
+      "color": "#ca1c1c"
+    },
+    {
+      "id": "file-explorer:open",
+      "icon": "lucide-files",
+      "name": "Files: Show file explorer",
+      "mode": "any",
+      "color": "#f2d726"
+    }
+  ],
   "rightRibbon": [],
   "titleBar": [],
   "statusBar": [],
@@ -29,7 +44,8 @@
     "statusbar": [],
     "leftRibbon": [
       "Advanced Tables Toolbar",
-      "Graphen-Ansicht öffnen"
+      "Graphen-Ansicht öffnen",
+      "Templater"
     ]
   },
   "spacing": 8,

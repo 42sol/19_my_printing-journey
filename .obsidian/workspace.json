@@ -30,9 +30,16 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "2b87a2fe07b1a74a",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "references/obsidian/plugins/python_lab/main.py.md",
+                "file": "references/obsidian/plugins/python_lab/readme.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "references/obsidian/plugins/python_lab/main.py.md",
+                "file": "references/obsidian/plugins/python_lab/readme.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "references/obsidian/plugins/python_lab/main.py.md"
+                "file": "references/obsidian/plugins/python_lab/readme.md"
               }
             }
           },
@@ -183,6 +190,8 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "cmdr:Files: Show file explorer": false,
+      "cmdr:Go to tab #1": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -191,17 +200,17 @@
       "random-note:Open random note": false,
       "workspaces:Manage workspace layouts": false,
       "breadcrumbs:Breadcrumbs Visualisation": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": true,
       "obsidian-advanced-slides:Show Slide Preview": false,
       "obsidian-excalidraw-plugin:New Excalidraw drawing": false,
       "open-vscode:VSCode": false,
       "templater-obsidian:Templater": false
     }
   },
-  "active": "1de947d287cecbcf",
+  "active": "ddad86965798cc37",
   "lastOpenFiles": [
-    "references/obsidian/plugins/dataview/examples/query.md",
     "references/obsidian/plugins/python_lab/main.py.md",
+    "references/obsidian/plugins/dataview/examples/query.md",
     "references/obsidian/plugins/python_lab/readme.md",
     "projects/active.md",
     "references/obsidian/plugins/dataview/examples/an_example.md",
