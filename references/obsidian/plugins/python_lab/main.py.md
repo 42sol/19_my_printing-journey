@@ -1,3 +1,7 @@
+---
+tags: projects, active
+---
+
 https://github.com/cristianvasquez/obsidian-lab-py
 
 - [ ] TODO: test obsidian-lab on windows

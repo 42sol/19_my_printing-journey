@@ -30,45 +30,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "1a7abf079528450e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "references/obsidian/plugins/dataview/examples/an_example.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d0da08d4f4cde731",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "references/obsidian/plugins/dataview/examples/query.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "123a941fcd813994",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "projects/active.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -134,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "references/obsidian/plugins/dataview/examples/an_example.md",
+                "file": "references/obsidian/plugins/python_lab/main.py.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "references/obsidian/plugins/dataview/examples/an_example.md",
+                "file": "references/obsidian/plugins/python_lab/main.py.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "references/obsidian/plugins/dataview/examples/an_example.md"
+                "file": "references/obsidian/plugins/python_lab/main.py.md"
               }
             }
           },
@@ -234,15 +198,15 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "1a7abf079528450e",
+  "active": "1de947d287cecbcf",
   "lastOpenFiles": [
     "references/obsidian/plugins/dataview/examples/query.md",
+    "references/obsidian/plugins/python_lab/main.py.md",
+    "references/obsidian/plugins/python_lab/readme.md",
+    "projects/active.md",
     "references/obsidian/plugins/dataview/examples/an_example.md",
     "references/obsidian/plugins/dataview/readme.md",
     "references/obsidian/plugins/dataview/examples/inline_example.md",
-    "projects/active.md",
-    "references/obsidian/plugins/python_lab/main.py.md",
-    "references/obsidian/plugins/python_lab/readme.md",
     "journals/2022-12-08.md",
     "journals/2022-12-20.md",
     "apps/openscad/libraries_selection/readme.md"
