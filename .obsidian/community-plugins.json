@@ -29,5 +29,6 @@
   "python-lab-plugin",
   "obsidian-screwdriver",
   "templater-obsidian",
-  "obsidian-text-expander"
+  "obsidian-text-expander",
+  "obsidian-qrcode-plugin"
 ]
