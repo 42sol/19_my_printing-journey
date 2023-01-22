@@ -12,5 +12,6 @@
     "downscalePercent": 77
   },
   "newFileFolderPath": "journals",
-  "showUnsupportedFiles": true
+  "showUnsupportedFiles": true,
+  "showFrontmatter": true
 }

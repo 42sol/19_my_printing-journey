@@ -30,5 +30,7 @@
   "obsidian-screwdriver",
   "templater-obsidian",
   "obsidian-text-expander",
-  "obsidian-qrcode-plugin"
+  "obsidian-qrcode-plugin",
+  "obsidian-sample-plugin",
+  "obsidian-icons-plugin"
 ]

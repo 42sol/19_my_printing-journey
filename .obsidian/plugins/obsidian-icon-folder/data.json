@@ -4,7 +4,13 @@
     "iconPacksPath": ".obsidian/plugins/obsidian-icon-folder/icons",
     "fontSize": 16,
     "iconColor": null,
-    "recentlyUsedIcons": [],
+    "recentlyUsedIcons": [
+      "RiShareForwardBoxLine",
+      "RiVipDiamondLine",
+      "RiCommandLine",
+      "📬",
+      "❕"
+    ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
     "extraMargin": {
@@ -13,5 +19,12 @@
       "bottom": 0,
       "left": 0
     }
-  }
+  },
+  "apps": {
+    "iconName": null,
+    "inheritanceIcon": "😉"
+  },
+  "apps/commandline": "RiCommandLine",
+  "apps/obsidian": "RiVipDiamondLine",
+  "apps/readme.md": "RiShareForwardBoxLine"
 }
