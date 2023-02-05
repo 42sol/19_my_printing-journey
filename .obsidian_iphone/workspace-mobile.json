@@ -13,9 +13,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "apps/openscad/notes_path_2022.md",
+                "file": "apps/pyto.md",
                 "mode": "source",
-                "source": false
+                "source": true
               }
             }
           }
@@ -44,7 +44,7 @@
         "state": {
           "type": "search",
           "state": {
-            "query": "",
+            "query": "obsidian",
             "matchingCase": false,
             "explainSearch": false,
             "collapseAll": false,
@@ -85,7 +85,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "apps/openscad/notes_path_2022.md",
+            "file": "apps/pyto.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "apps/openscad/notes_path_2022.md",
+            "file": "apps/pyto.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -114,7 +114,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "apps/openscad/notes_path_2022.md"
+            "file": "apps/pyto.md"
           }
         }
       }
@@ -123,6 +123,15 @@
   },
   "active": "b2646b57fca99ff3",
   "lastOpenFiles": [
-    "apps/Z_more/fornjot/readme.md"
+    "apps/pythonista.md",
+    "apps/pyto.md",
+    "private/var/mobile/Library/Mobile.md",
+    "Stadler_Rail_logotype.svg",
+    "Drafts.md",
+    "apps/openscad/readme.md",
+    "apps/readme.md",
+    "apps/Untitled.md",
+    "readme.md",
+    "apps/openscad/notes_path_2022.md"
   ]
 }

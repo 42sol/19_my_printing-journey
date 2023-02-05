@@ -2,6 +2,11 @@
 
 ## Intend
 
+```qrcode
+https://github.com
+```
+
+
 This is a journaling style knowledge base about things I am learning on my voyage with 3D-printing - or making in its broader sense.
 
 I use this to keep my notes.
