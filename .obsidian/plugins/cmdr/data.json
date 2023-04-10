@@ -3,50 +3,48 @@
   "showAddCommand": true,
   "debug": false,
   "editorMenu": [],
-  "fileMenu": [
-    {
-      "id": "workspace:goto-tab-1",
-      "icon": "clock-1",
-      "name": "Go to tab #1",
-      "mode": "any"
-    }
-  ],
+  "fileMenu": [],
   "leftRibbon": [
     {
-      "id": "workspace:goto-tab-1",
-      "icon": "alert-circle",
-      "name": "Go to tab #1",
-      "mode": "desktop",
-      "color": "#ca1c1c"
+      "id": "obsidian-git:pull",
+      "icon": "arrow-down",
+      "name": "Obsidian Git: Pull",
+      "mode": "any"
     },
     {
-      "id": "file-explorer:open",
-      "icon": "lucide-files",
-      "name": "Files: Show file explorer",
-      "mode": "any",
-      "color": "#f2d726"
-    }
-  ],
-  "rightRibbon": [],
-  "titleBar": [],
-  "statusBar": [],
-  "pageHeader": [
+      "id": "obsidian-git:commit-specified-message",
+      "icon": "package",
+      "name": "Obsidian Git: Commit all changes with specific message",
+      "mode": "any"
+    },
+    {
+      "id": "obsidian-git:push2",
+      "icon": "arrow-up",
+      "name": "Obsidian Git: Push",
+      "mode": "any"
+    },
     {
       "id": "workspace:split-vertical",
       "icon": "lucide-separator-vertical",
       "name": "Split right",
       "mode": "any"
+    },
+    {
+      "id": "workspace:toggle-pin",
+      "icon": "lucide-pin",
+      "name": "Toggle pin",
+      "mode": "any"
     }
   ],
+  "rightRibbon": [],
+  "titleBar": [],
+  "statusBar": [],
+  "pageHeader": [],
   "macros": [],
   "explorer": [],
   "hide": {
     "statusbar": [],
-    "leftRibbon": [
-      "Advanced Tables Toolbar",
-      "Graphen-Ansicht öffnen",
-      "Templater"
-    ]
+    "leftRibbon": []
   },
   "spacing": 8,
   "advancedToolbar": {

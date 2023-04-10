@@ -1,17 +1,3 @@
 {
-  "trashOption": "local",
-  "newFileLocation": "folder",
-  "readableLineLength": false,
-  "showLineNumber": true,
-  "attachmentFolderPath": "./",
-  "alwaysUpdateLinks": true,
-  "pdfExportSettings": {
-    "pageSize": "A4",
-    "landscape": false,
-    "margin": "0",
-    "downscalePercent": 77
-  },
-  "newFileFolderPath": "journals",
-  "showUnsupportedFiles": true,
-  "showFrontmatter": true
+  "livePreview": false
 }

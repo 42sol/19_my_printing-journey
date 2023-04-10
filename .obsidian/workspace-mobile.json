@@ -1,18 +1,22 @@
 {
   "main": {
-    "id": "1a4bfce2f30c0556",
+    "id": "2cb7caa80f7df682",
     "type": "split",
     "children": [
       {
-        "id": "076e743d16040268",
+        "id": "829211c7a21abd5d",
         "type": "tabs",
         "children": [
           {
-            "id": "baec2933ec8d6d34",
+            "id": "90f6f6166827e95f",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "core-tools/beyond pacman.md",
+                "mode": "source",
+                "source": true
+              }
             }
           }
         ]
@@ -21,11 +25,11 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "f0a7ec9a14a1b9fd",
+    "id": "29998bdf9fec0193",
     "type": "mobile-drawer",
     "children": [
       {
-        "id": "f9d7a40fa6ef6b16",
+        "id": "94e1e5583df8513f",
         "type": "leaf",
         "state": {
           "type": "file-explorer",
@@ -35,7 +39,7 @@
         }
       },
       {
-        "id": "78167709e2c0b68c",
+        "id": "92e5e7b6914d6bae",
         "type": "leaf",
         "state": {
           "type": "search",
@@ -50,7 +54,7 @@
         }
       },
       {
-        "id": "5209106a554b6f35",
+        "id": "8b3c43ee7cd11005",
         "type": "leaf",
         "state": {
           "type": "tag",
@@ -61,7 +65,7 @@
         }
       },
       {
-        "id": "70c51f07e164866b",
+        "id": "268b3aa1614dd317",
         "type": "leaf",
         "state": {
           "type": "starred",
@@ -72,15 +76,16 @@
     "currentTab": 0
   },
   "right": {
-    "id": "3fda2c4e5a0fc1ee",
+    "id": "0a5ec5bf993da394",
     "type": "mobile-drawer",
     "children": [
       {
-        "id": "92aab438ce38ed0c",
+        "id": "f7a3be55f286c3b9",
         "type": "leaf",
         "state": {
           "type": "backlink",
           "state": {
+            "file": "core-tools/beyond pacman.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -92,27 +97,63 @@
         }
       },
       {
-        "id": "5a6fb2b2b128c489",
+        "id": "e0dade5d78bb8ce1",
         "type": "leaf",
         "state": {
           "type": "outgoing-link",
           "state": {
+            "file": "core-tools/beyond pacman.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
         }
       },
       {
-        "id": "66711a131a2e31fc",
+        "id": "80b6f7b4e3ec45fe",
         "type": "leaf",
         "state": {
           "type": "outline",
-          "state": {}
+          "state": {
+            "file": "core-tools/beyond pacman.md"
+          }
         }
       }
     ],
     "currentTab": 0
   },
-  "active": "baec2933ec8d6d34",
-  "lastOpenFiles": []
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "90f6f6166827e95f",
+  "lastOpenFiles": [
+    "review_obsidian.md",
+    "core-tools/beyond pacman.md",
+    "core-tools/zshrc.md",
+    "core-tools",
+    "minecraft/install.md",
+    "minecraft",
+    "Untitled.canvas",
+    "display_configuration.md",
+    "Arch_Linux.md",
+    "README.md",
+    "meson_biuld_and_install.md",
+    "remote-access/_main.md",
+    "remote-access",
+    "Arch_Linux_Questions.md",
+    "install_multiple_desktop_environment.md",
+    "audible/Audible.md",
+    "audible",
+    "secrets/Passwordmanager.md",
+    "secrets",
+    "openscad.md",
+    "tiling-manager/QTile.md",
+    "tiling-manager"
+  ]
 }
