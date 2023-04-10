@@ -2,6 +2,8 @@
 tags: [python, ios]
 ---
 
+- [ ] TODO: move to 18_my_dl
+
 [App](pythonista://)
 
 ## QR Codes (iphone)

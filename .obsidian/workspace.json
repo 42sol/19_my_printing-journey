@@ -4,67 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "0b1687c995b96595",
+        "id": "d224ea871997fb6e",
         "type": "tabs",
         "children": [
           {
-            "id": "1fa34ce3ec221507",
+            "id": "5859baa70ead8a97",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "21f6956378843f86",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "cb0e8d1cd85e3c5b",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "6150df597bf241ef",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "8f8a698226ce84b4",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "8773ce98b535cedb",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "e2f9c4a567428b36",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
+              "type": "excalidraw",
+              "state": {
+                "file": "_inbox/Excalidraw/Drawing 2023-01-05 21.26.31.excalidraw.md"
+              }
             }
           }
-        ],
-        "currentTab": 6
+        ]
       }
     ],
     "direction": "vertical"
@@ -130,6 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "_inbox/Excalidraw/Drawing 2023-01-05 21.26.31.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -146,6 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "_inbox/Excalidraw/Drawing 2023-01-05 21.26.31.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -167,7 +122,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "_inbox/Excalidraw/Drawing 2023-01-05 21.26.31.excalidraw.md"
+              }
             }
           },
           {
@@ -195,16 +152,38 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "open-vscode:VSCode": false,
+      "templater-obsidian:Templater": false,
       "switcher:Open quick switcher": true,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "ava:Ava": false,
+      "ava:Ava - Show Links": false,
+      "ava:Ava - Open Rewrite Playground": false,
+      "obsidian-advanced-slides:Show Slide Preview": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "cmdr:Obsidian Git: Pull": false,
+      "cmdr:Obsidian Git: Commit all changes with specific message": false,
+      "cmdr:Obsidian Git: Push": false,
+      "cmdr:Split right": false,
+      "cmdr:Toggle pin": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "e2f9c4a567428b36",
+  "active": "5859baa70ead8a97",
   "lastOpenFiles": [
+    "_inbox/apps/readme.md",
+    "_inbox/apps/Untitled.md",
+    "_inbox/apps/pythonista.md",
+    "_inbox/apps/pyto.md",
+    "_inbox/apps/obsidian/active_obsidian.md",
+    "_inbox/apps/obsidian/develop_own_plugin/Develop Your Own Obsidian Plugin.md",
+    "_inbox/apps/commandline/airshare_cl_share_files.md",
+    "_inbox/apps/commandline/age_cl_encryption.md",
+    "_inbox/apps/commandline/aerc__an_cl_email_client.md",
     "_inbox/Unbenannt.scad",
     "_inbox/Unbenannt 2.scad",
     "_inbox/Stadler_Rail_logotype.svg",
@@ -227,7 +206,6 @@
     "_inbox/references/obsidian/plugins/python_lab/readme.md",
     "_inbox/references/obsidian/plugins/python_lab/main.py.md",
     "_inbox/references/obsidian/plugins/dataview/readme.md",
-    "_inbox/references/obsidian/plugins/dataview/examples",
     "_inbox/references/DIN-Formate.md",
     "_inbox/projects/Z_archive/2022/2022-12.md",
     "_inbox/projects/post all makes.md",
@@ -238,14 +216,6 @@
     "_inbox/projects/Parametric_Hook_1_2022-12-20 12.25.23.png",
     "_inbox/projects/OpenSCAD.md",
     "_inbox/projects/Lego.md",
-    "_inbox/projects/Lego Specification.md",
-    "_inbox/projects/Lego Gear Dimensons.md",
-    "_inbox/projects/Boxes.md",
-    "_inbox/projects/2023.01.md",
-    "_inbox/private/var/mobile/Library/Mobile.md",
-    "_inbox/journals/2022-12-21.md",
-    "_inbox/journals/2022-12-20.md",
-    "_inbox/journals/2022-12-11.md",
     "_inbox/apps/openscad/libraries_selection/bricked/Lego_dimensions.svg",
     "_inbox/apps/openscad/openscad.png",
     "Untitled.canvas"
